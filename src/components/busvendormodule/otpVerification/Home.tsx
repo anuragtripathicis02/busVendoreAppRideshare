@@ -1,0 +1,88 @@
+'use client'
+import React, { useState } from 'react'
+import bgImage from '../../../../public/images/bg-image.png'
+import ImageBuilding from '../../../../public/images/city-building.png'
+import logoFormWhite from "../../../../public/images/logo-white.png";
+import logoForm from "../../../../public/images/logo-bus-vender.png";
+import Image from "next/image";
+import Link from 'next/link';
+
+import Nav from 'react-bootstrap/Nav';
+import Tab from 'react-bootstrap/Tab';
+import Form from 'react-bootstrap/Form';
+import '../../../app/flags.css'
+
+
+
+const Home = () => {
+
+      const [passwordVisibility, setPasswordVisibility] = useState({
+          password1: false,
+          password2: false,
+          password3: false
+      });
+
+          // Toggle function
+    const togglePasswordVisibility = (field) => {
+      setPasswordVisibility(prevState => ({
+          ...prevState,
+          [field]: !prevState[field]
+      }));
+  };
+
+
+  return (
+    <div className='d-flex flex-wrap auth-wrapper'>
+      <div className="auth-info d-lg-block d-none" style={{ backgroundImage: "url('../../images/bg-image.png')" }} >
+          <div className="auth-logo ">
+            <Image src={logoFormWhite} alt="" />
+          </div>
+      </div>
+      <div className='auth-form'>
+        <div className='toggle-arrow'>
+          <button className='btn btn-white'>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.7593 7.90723L4.66602 16.0006L12.7593 24.0939" stroke="#652669" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.3326 16H4.89258" stroke="#652669" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div className='auth-banner-wrapper'>
+          <div className='auth-banner'>
+            <div className="auth-img d-lg-block d-none">
+              <Image src={ImageBuilding} alt="" />
+            </div>
+          </div>
+          <div className='card card-auth-form verification-sec'>
+            <div className='block-head text-center'>
+              <div className="auth-logo d-lg-none d-block mb-4">
+                <Image src={logoForm} alt="" />
+              </div>
+              <h2 className='form-title'>OTP Verification</h2>
+              <p>We have sent you an OTP to your registered number <Link href="" className='text-color-purple'>*******789</Link> please enter it bellow to verify that it's really yours...</p>
+            </div>
+
+            <div className="form-group mb-24 d-flex align-items-center gap-3 text-center">
+                <Form.Control type="text" placeholder='1' className='text-center' maxLength={1}/>
+                <Form.Control type="text" placeholder='1' className='text-center' maxLength={1}/>
+                <Form.Control type="text" placeholder='1' className='text-center' maxLength={1}/>
+                <Form.Control type="text" placeholder='1' className='text-center' maxLength={1}/>
+            </div>
+          
+            <div className='sec-privacy-policy text-center mb-32'>
+              <h5 className='m-0 text-center'>Didn't Get the OTP? <Link href="">  Resend OTP</Link> </h5>
+            </div>
+            <div className='mb-0'>
+            <button className="btn btn-secondary w-100">Verify OTP</button>
+            </div>
+          </div>
+          <div className='copyright-text text-center'>
+              <p>© 2024, SQUCH - Control Panel. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Home
