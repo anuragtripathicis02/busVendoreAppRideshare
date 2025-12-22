@@ -142,7 +142,7 @@ const Home = () => {
         </div>
 
         {/* Footer */}
-        <div className='mt-auto text-center pt-4'>
+        <div className='mt-auto text-center pt-4 pb-4'>
           <p>© 2024, SQUCH - Control Panel. All rights reserved.</p>
         </div>
 

@@ -4918,9 +4918,9 @@ ul.calendy-day li .btn-day {
     color: #20A66A;
 }
 
-.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+/* .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
     border: none;
-}
+} */
 
 
 .setting-sec .setting-box {
@@ -6097,4 +6097,39 @@ ul.week-select-box .week.weekActive {
     }
 
 
+}
+
+.com-dropdown .dropdown-menu .dropdown-item:active {
+    background: transparent;
+    color: var(--text-color);
+}
+.dropdown-item:active {
+    background: transparent !important;
+    color: var(--text-color);
+}
+
+.filter-top-sec .btn-secondary:hover svg path {
+    stroke: none;
+}
+
+
+
+.btn:focus {
+    color: initial !important;
+}
+
+button.btn.btn-secondary.btn-orange:hover {
+    color: var(--white);
+}
+
+.fade.common-modal-sec.cancel-modal-booking .modal-footer-box button.btn.btn-secondary.btn-orange:hover {
+    color: var(--white) !important;
+}
+
+button.btn.btn-secondary.btn-orange:focus {
+    color: var(--white) !important;
+}
+
+.card.bus-card-item.card-modal-box ul li button {
+    border: none;
 }

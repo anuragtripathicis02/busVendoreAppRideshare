@@ -23,7 +23,7 @@ const GuestDetails = () => {
                             <div className='col-md-4'>
                                 <div className="form-group mb-4 position-relative">
                                     <Form.Label >Passenger Age</Form.Label>
-                                    <Form.Control type="text" placeholder='75' />
+                                    <Form.Control type="text" placeholder='75' className='pe-5' />
                                     <span className='adult'>Adult</span>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@ const GuestDetails = () => {
                             <div className='col-md-4'>
                                 <div className="form-group mb-md-0 mb-4 position-relative">
                                     <Form.Label >Passenger Age</Form.Label>
-                                    <Form.Control type="text" placeholder='8' />
+                                    <Form.Control type="text" placeholder='8' className='pe-5'/>
                                     <span className='adult'>Child</span>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@ const GuestDetails = () => {
                             <div className='col-md-4'>
                                 <div className="form-group mb-md-0 mb-4 position-relative">
                                     <Form.Label >Passenger Age</Form.Label>
-                                    <Form.Control type="text" placeholder='25' />
+                                    <Form.Control type="text" placeholder='25' className='pe-5' />
                                     <span className='adult'>Adult</span>
                                 </div>
                             </div>
@@ -157,7 +157,7 @@ const GuestDetails = () => {
                             <div className='col-md-4'>
                                 <div className="form-group mb-md-0 mb-4 position-relative">
                                     <Form.Label >Passenger Age</Form.Label>
-                                    <Form.Control type="text" placeholder='25' />
+                                    <Form.Control type="text" placeholder='25' className='pe-5' />
                                     <span className='adult'>Adult</span>
                                 </div>
                             </div>
